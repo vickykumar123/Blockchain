@@ -11,7 +11,7 @@ async function mockDeployFunc(hre) {
     log("Local network detected! Deploying mocks...");
     const ethUsdPriceFeed = await deploy("MockV3Aggregator", {
       from: deployer,
-      args: ["18", "20000000000"], // 18 decimals and price of $2000.00
+      args: [8, 200000000000], // 8 decimals and price of $2000.00 (2000 * 10^8)
       log: true,
     });
 

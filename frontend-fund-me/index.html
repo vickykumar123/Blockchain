@@ -5,8 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fund Me</title>
   </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: xx-large;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: large;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
   <body>
     Hello, welcome to the Fund Me page!
     <p>Here you can support various projects and initiatives.</p>
+    <button id="connect">Connect to Ethereum</button>
+
+    <!-- Form -->
+    <form
+      id="fund-form"
+      style="
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 10px;
+      "
+    >
+      <label for="ethAmount">Amount in ETH:</label>
+      <input
+        type="text"
+        id="ethAmount"
+        name="ethAmount"
+        placeholder="0.1"
+        style="
+          padding: 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          width: 100%;
+          font-size: large;
+        "
+      />
+      <button id="fund">Fund</button>
+    </form>
+    <div style="margin-top: 20px">
+      <button id="getBalance">Get Balance</button>
+      <p id="balance" style="margin-top: 20px; font-size: large"></p>
+    </div>
+    <div>
+      <button id="withdraw">Withdraw</button>
+      <p id="withdrawMessage" style="margin-top: 20px; font-size: large"></p>
+    </div>
   </body>
+  <script type="module" src="index.js"></script>
 </html>
